@@ -4,13 +4,14 @@ import StyledButton from "@/components/StyledButton/StyledButton";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import PageWrapper from "./page-wrapper";
+import Planet from "@/components/Planet/Planet";
 
 export default function Welcome() {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
-  console.log(isAnimationComplete);
   return (
     <PageWrapper>
       <div className="flex flex-col items-center w-screen min-h-screen relative">
+        <Planet />
         <motion.div className="flex flex-col justify-center items-center w-[85vw] sm:w-[50vw] lg:max-w-[27vw] absolute top-[10%] lg:top-[25%] overflow-hidden [&>*]:mb-3">
           <AnimatedText
             text="Kevin's website"

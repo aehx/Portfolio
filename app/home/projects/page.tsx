@@ -1,5 +1,10 @@
+"use client";
+import { useEffect } from "react";
 import PageWrapper from "../../page-wrapper";
 const Home = () => {
+  useEffect(() => {
+    console.log(window.innerWidth);
+  }, []);
   return (
     <PageWrapper>
       <section className="flex min-h-screen flex-col items-center justify-between p-24 w-screen">
