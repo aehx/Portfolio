@@ -8,6 +8,7 @@ import Planet from "@/components/Planet/Planet";
 
 export default function Welcome() {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  console.log("hey");
   return (
     <PageWrapper>
       <div className="flex flex-col items-center w-screen min-h-screen relative">
