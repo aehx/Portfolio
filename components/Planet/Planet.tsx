@@ -1,6 +1,6 @@
 "use client";
 import * as THREE from "three";
-import { useEffect, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 const Planet = () => {
   const canvasRef = useRef<null | HTMLDivElement>(null);
@@ -28,7 +28,9 @@ const Planet = () => {
     scene.add(light);
 
     // Création de la texture de la planète
-    const planetTexture = new THREE.TextureLoader().load("/earth.jpg");
+    const planetTexture = new THREE.TextureLoader().load("/earth.jpg", () => {
+      renderer.render(scene, camera);
+    });
 
     // Création de la géométrie de la sphère
     const planetGeometry = new THREE.SphereGeometry(50, 32, 32);
@@ -51,30 +53,12 @@ const Planet = () => {
     scene.add(planet);
     scene.add(moon);
 
-    // Ajout d'un nuage de particules
-    const cloudTexture = new THREE.TextureLoader().load("/cloud.png");
-    const cloudMaterial = new THREE.MeshLambertMaterial({
-      map: cloudTexture,
-      transparent: true,
-      opacity: 0.6,
-    });
-    const cloudGeometry = new THREE.SphereGeometry(52, 32, 32);
-    const cloud = new THREE.Mesh(cloudGeometry, cloudMaterial);
-    scene.add(cloud);
-
-    // Fonction d'animation des nuages de particules
-    function animateCloud() {
-      cloud.rotation.y += 0.0005;
-    }
-
-    // Fonction d'animation de la sphère et des nuages
     let planetAngle = 0;
     let moonAngle = 0;
     const planetDistance = 250;
     const moonDistance = 100;
     function animate() {
       requestAnimationFrame(animate);
-      animateCloud();
       planetAngle += 0.005;
       planet.position.z = planetDistance * Math.cos(planetAngle);
       // planet.position.y = planetDistance * Math.sin(planetAngle);
@@ -107,4 +91,4 @@ const Planet = () => {
   );
 };
 
-export default Planet;
+export default memo(Planet);
