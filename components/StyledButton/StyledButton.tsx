@@ -20,7 +20,7 @@ const StyledButton = ({ href, text, className }: LinkButtonProps) => {
   const [delay, setDelay] = useState(0.84);
   return (
     <motion.div
-      className="flex justify-center items-center relative"
+      className="flex justify-center items-center relative w-[190px]"
       whileHover="hover"
       initial="initial"
       animate="end"
@@ -57,11 +57,16 @@ const StyledButton = ({ href, text, className }: LinkButtonProps) => {
         variants={buttonBorderLeftMotion}
       />
       <motion.div
-        className="absolute bottom-0 -left-[2px]"
+        className="absolute bottom-0 -left-[1%]"
         transition={{ duration: 0.21, ease: "easeOut", delay: delay }}
         variants={littleBorderMotion}
       />
-      <LinkButton href={href} text={text} className={`${className}`} />
+      <LinkButton
+        href={href}
+        text={text}
+        className={`${className}`}
+        displayBottomBorder={false}
+      />
     </motion.div>
   );
 };

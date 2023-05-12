@@ -1,7 +1,12 @@
 import "./globals.css";
-import { Orbitron } from "next/font/google";
+import { Orbitron, Poppins } from "next/font/google";
 
 const orbitron = Orbitron({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
 });

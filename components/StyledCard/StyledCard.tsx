@@ -4,19 +4,29 @@ import { useState } from "react";
 import { globalDivVariant, textVariant } from "./CardMotion";
 import StyledBar from "../StyledBar/StyledBar";
 import SimpleStyledBar from "../StyledBar/SimpleStyledBar";
+import ScrollIndicator from "../ScrollIndicator";
 
-const StyledCard = () => {
+const StyledCard = ({
+  firstWord,
+  secondWord,
+  thirdWord,
+}: {
+  firstWord: string;
+  secondWord: string;
+  thirdWord: string;
+}) => {
   const [width, setWidth] = useState(1);
 
   return (
     <motion.section
-      className="flex flex-col items-center justify-between p-10 lg:p-24 min-h-screen"
+      className="flex flex-col items-center justify-between relative"
       initial="initial"
       animate="end"
       exit="exit"
       transition={{ delay: 5 }}
     >
-      <div className="flex flex-col justify-center items-center w-[85vw] sm:max-w-[50vw] lg:max-w-[25vw] xl:max-w-[20vw] 2xl:max-w-[20vw] min-h-[70vh] lg:min-h-[50vh]  2xl:min-h-[40vh] relative p-10">
+      <div className="flex flex-col justify-center items-center w-[85vw] sm:max-w-[50vw] lg:max-w-[20vw] xl:max-w-[20vw] 2xl:max-w-[17vw] min-h-[70vh] lg:min-h-[50vh]  2xl:min-h-[40vh] relative p-10z">
+        <ScrollIndicator className="absolute bottom-0 right-[60%] lg:bottom-1 lg:-right-2" />
         <StyledBar
           direction="right"
           className="absolute top-[15%]"
@@ -44,8 +54,14 @@ const StyledCard = () => {
           secondBarDuration={0.4}
         />
         <motion.div
-          initial={{ height: "0px", width: width }}
-          animate={{ height: "100%", width: width }}
+          initial={{
+            height: "0px",
+            width: width,
+          }}
+          animate={{
+            height: "100%",
+            width: 1,
+          }}
           onAnimationComplete={() => {
             setWidth(0);
           }}
@@ -60,28 +76,25 @@ const StyledCard = () => {
         <motion.p
           variants={textVariant}
           transition={{ delay: 2.2, duration: 1.5 }}
-          className="absolute top-[27%] left-[10%] text-3xl"
+          className="absolute top-[27%] left-[10%] text-3xl text-zinc-200"
         >
-          WELCOME
+          {firstWord}
         </motion.p>
         <motion.p
           variants={textVariant}
           transition={{ delay: 2.5, duration: 2 }}
-          className="absolute top-[46%] right-[10%] text-3xl"
+          className="absolute top-[46%] right-[10%] text-3xl text-zinc-200"
         >
-          IN MY
+          {secondWord}
         </motion.p>
         <motion.p
           variants={textVariant}
           transition={{ delay: 3, duration: 2 }}
-          className="absolute top-[66%] left-[10%] text-3xl"
+          className="absolute top-[66%] left-[10%] text-3xl text-zinc-200"
         >
-          PORTFOLIO
+          {thirdWord}
         </motion.p>
       </div>
-
-      <p>L&apos;entrée est ici</p>
-      <div></div>
     </motion.section>
   );
 };

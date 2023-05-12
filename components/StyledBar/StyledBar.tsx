@@ -17,8 +17,8 @@ const StyledBar = ({
 }) => {
   return (
     <motion.div
-      initial={{ width: 0, height: 2, backgroundColor: "#d4d4d8" }}
-      animate={{ width: "80%", height: 2, backgroundColor: "#d4d4d8" }}
+      initial={{ width: 0, height: 1, backgroundColor: "#d4d4d8" }}
+      animate={{ width: "80%", height: 1, backgroundColor: "#d4d4d8" }}
       transition={{ delay, duration, type: "easeIn" }}
       className={className}
     >
@@ -27,8 +27,8 @@ const StyledBar = ({
           className={`absolute top-0 right-0 ${
             direction === "left" ? "left-0" : "right-0"
           }`}
-          initial={{ width: 0, height: 6, backgroundColor: "#d4d4d8" }}
-          animate={{ width: "60px", height: 6, backgroundColor: "#d4d4d8" }}
+          initial={{ width: 0, height: 4, backgroundColor: "#d4d4d8" }}
+          animate={{ width: "60px", height: 4, backgroundColor: "#d4d4d8" }}
           transition={{
             delay: secondBarDelay,
             duration: secondBarDuration,

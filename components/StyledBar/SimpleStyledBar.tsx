@@ -11,8 +11,8 @@ const SimpleStyledBar = ({
 }) => {
   return (
     <motion.div
-      initial={{ width: 0, height: 5, backgroundColor: "black" }}
-      animate={{ width: `${size}`, height: 5, backgroundColor: "black" }}
+      initial={{ width: 0, height: 4, backgroundColor: "#e0e0e7" }}
+      animate={{ width: `${size}`, height: 4, backgroundColor: "#e0e0e7" }}
       transition={{ delay: delay, duration: 0.7 }}
       className={className}
     />
