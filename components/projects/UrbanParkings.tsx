@@ -1,33 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ArrowUp from "../ArrowUp";
 import SeparationBar from "../StyledBar/SeparationBar";
 import Paragraph from "../TextComponent/Paragraphe";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
 import StyledCard from "../StyledCard/StyledCard";
 import ProjectVideoForPc from "./ProjectVideoForPc";
+import ProjectVideoForMobile from "./ProjectVideoForMobile";
 const UrbanParking = ({ device }: { device: string }) => {
-  const [isClicked, setIsClicked] = useState(false);
-  const initialWidth = "30px";
-  const initialHeight = "30px";
-  const targetWidth = isClicked ? "50%" : "30px";
-  const targetHeight = isClicked ? "50%" : "30px";
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
   return (
     <>
       {device !== "pc" && (
-        <motion.div
-          className="flex justify-center items-center fixed bottom-0 left-0  bg-white rounded-full z-50"
-          initial={{ width: initialWidth, height: initialHeight }}
-          animate={{ width: targetWidth, height: targetHeight }}
-          transition={{ duration: 2 }}
-          onClick={handleClick}
-        >
-          <FontAwesomeIcon icon={faEye} />
-        </motion.div>
+        <ProjectVideoForMobile src="/urban_parking_video.mp4" />
       )}
       {device === "pc" && <ProjectVideoForPc src="/urban_parking_video.mp4" />}
       <div

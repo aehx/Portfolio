@@ -29,12 +29,7 @@ const LinkButton = ({
   const path = usePathname();
   const style = `relative ${className} ` ?? "relative";
   return (
-    <Link
-      rel="preload"
-      href={href}
-      className={style}
-      target={`${blank ? "_blank" : ""}`}
-    >
+    <Link href={href} className={style} target={`${blank ? "_blank" : ""}`}>
       <motion.div initial="hidden" whileHover="hover" animate="end">
         <motion.p
           initial={{ opacity: 0 }}
