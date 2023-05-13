@@ -10,10 +10,12 @@ const StyledCard = ({
   firstWord,
   secondWord,
   thirdWord,
+  showScrollIndicator = true,
 }: {
   firstWord: string;
   secondWord: string;
   thirdWord: string;
+  showScrollIndicator?: boolean;
 }) => {
   const [width, setWidth] = useState(1);
 
@@ -26,7 +28,11 @@ const StyledCard = ({
       transition={{ delay: 5 }}
     >
       <div className="flex flex-col justify-center items-center w-[85vw] sm:max-w-[50vw] lg:max-w-[20vw] xl:max-w-[20vw] 2xl:max-w-[17vw] min-h-[70vh] lg:min-h-[50vh]  2xl:min-h-[40vh] relative p-10z">
-        <ScrollIndicator className="absolute bottom-0 right-[60%] lg:bottom-1 lg:-right-2" />
+        {showScrollIndicator ? (
+          <ScrollIndicator className="absolute bottom-0 right-[60%] lg:bottom-1 lg:-right-2" />
+        ) : (
+          <></>
+        )}
         <StyledBar
           direction="right"
           className="absolute top-[15%]"

@@ -5,17 +5,42 @@ import checkDevice from "@/utils/checkDevice";
 import MoviesDistrict from "@/components/projects/MoviesDistrict";
 import UrbanParking from "@/components/projects/UrbanParkings";
 import { useState } from "react";
+import StyledCard from "@/components/StyledCard/StyledCard";
+import Paragraph from "@/components/TextComponent/Paragraphe";
+import LinkButton from "@/components/LinkButton";
 const Projects = () => {
-  const [whichProject, setWhichProject] = useState<boolean>(false);
   const device = checkDevice();
   return (
     <PageWrapper>
       <section className="flex h-screen flex-col items-end justify-between w-screen overflow-scroll">
-        {whichProject ? (
-          <MoviesDistrict device={device} />
-        ) : (
-          <UrbanParking device={device} />
-        )}
+        <div className="flex flex-col justify-center items-center w-1/2 h-1/2 absolute bottom-[15%] left-0">
+          <LinkButton
+            href=""
+            text="voir ce projet"
+            displayBottomBorder={true}
+          />
+          <StyledCard
+            firstWord="Movies"
+            secondWord="District"
+            thirdWord="🍿🎬"
+            showScrollIndicator={false}
+          />
+        </div>
+        <div className="flex flex-col justify-center items-center w-1/2 h-1/2 absolute bottom-[15%] right-0">
+          <LinkButton
+            href=""
+            text="voir ce projet"
+            displayBottomBorder={true}
+          />
+          <StyledCard
+            firstWord="Urban"
+            secondWord="Parkings"
+            thirdWord="🚙 🛣️ 🚏"
+            showScrollIndicator={false}
+          />
+        </div>
+        {/* <MoviesDistrict device={device} /> */}
+        {/* <UrbanParking device={device} /> */}
       </section>
     </PageWrapper>
   );
