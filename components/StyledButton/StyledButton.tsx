@@ -14,9 +14,10 @@ type LinkButtonProps = {
   href: string;
   text: string;
   className?: string;
+  blank?: string;
 };
 
-const StyledButton = ({ href, text, className }: LinkButtonProps) => {
+const StyledButton = ({ href, text, className, blank }: LinkButtonProps) => {
   const [delay, setDelay] = useState(0.84);
   return (
     <motion.div
@@ -65,6 +66,7 @@ const StyledButton = ({ href, text, className }: LinkButtonProps) => {
         href={href}
         text={text}
         className={`${className}`}
+        blank={blank}
         displayBottomBorder={false}
       />
     </motion.div>

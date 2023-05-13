@@ -1,18 +1,24 @@
 "use client";
-import { useEffect } from "react";
+
 import PageWrapper from "../../page-wrapper";
-const Home = ({ params }: { params: any }) => {
-  useEffect(() => {
-    console.log(params);
-    console.log(window.innerWidth);
-  }, [params]);
+import checkDevice from "@/utils/checkDevice";
+import MoviesDistrict from "@/components/projects/MoviesDistrict";
+import UrbanParking from "@/components/projects/UrbanParkings";
+import { useState } from "react";
+const Projects = () => {
+  const [whichProject, setWhichProject] = useState<boolean>(false);
+  const device = checkDevice();
   return (
     <PageWrapper>
-      <section className="flex min-h-screen flex-col items-center justify-between p-24 w-screen">
-        <p className="text-white">PROJECTS</p>
+      <section className="flex h-screen flex-col items-end justify-between w-screen overflow-scroll">
+        {whichProject ? (
+          <MoviesDistrict device={device} />
+        ) : (
+          <UrbanParking device={device} />
+        )}
       </section>
     </PageWrapper>
   );
 };
 
-export default Home;
+export default Projects;

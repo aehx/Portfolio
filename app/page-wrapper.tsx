@@ -14,14 +14,13 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
         }}
       >
         <motion.div
-          initial={{ opacity: 0, backgroundColor: "#FFF" }}
+          initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            backgroundColor: "transparent",
+            backgroundColor: "rgba(0,0,0,0)",
           }}
           exit={{
             opacity: 0.5,
-            backgroundColor: "#FFF",
           }}
           transition={{ duration: 2 }}
         >

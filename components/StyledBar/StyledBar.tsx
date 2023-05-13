@@ -19,7 +19,7 @@ const StyledBar = ({
     <motion.div
       initial={{ width: 0, height: 1, backgroundColor: "#d4d4d8" }}
       animate={{ width: "80%", height: 1, backgroundColor: "#d4d4d8" }}
-      transition={{ delay, duration, type: "easeIn" }}
+      transition={{ delay, duration }}
       className={className}
     >
       <span className="relative block w-full">

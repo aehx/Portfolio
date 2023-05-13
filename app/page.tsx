@@ -2,16 +2,17 @@
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import StyledButton from "@/components/StyledButton/StyledButton";
 import { motion } from "framer-motion";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import PageWrapper from "./page-wrapper";
 import Planet from "@/components/Planet/Planet";
 
 export default function Welcome() {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  const [isInactive, setIsInactive] = useState(false);
   return (
     <PageWrapper>
       <div className="flex flex-col items-center w-screen min-h-screen relative ">
-        <Planet />
+        <Planet isInactive={isInactive} />
         <motion.div className="flex flex-col justify-center items-center w-[85vw] sm:w-[50vw] lg:max-w-[27vw] absolute top-[10%] lg:top-[25%] overflow-hidden [&>*]:mb-3">
           <AnimatedText
             text="Kevin's website"
@@ -40,11 +41,13 @@ export default function Welcome() {
             />
           </div>
           {isAnimationComplete && (
-            <StyledButton
-              href="/home"
-              text="ENTER SITE"
-              className="cursor-pointer w-full pb-2 pt-6 pr-16 pl-3 text-[10px] font-semibold"
-            />
+            <div onClick={() => setIsInactive(true)}>
+              <StyledButton
+                href="/home"
+                text="ENTER SITE"
+                className="cursor-pointer w-full pb-2 pt-6 pr-16 pl-3 text-[10px] font-semibold"
+              />
+            </div>
           )}
         </motion.div>
       </div>

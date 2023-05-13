@@ -3,8 +3,7 @@ import StyledButton from "@/components/StyledButton/StyledButton";
 import PageWrapper from "../../page-wrapper";
 // import Planet from "@/components/Planet/Planet";
 
-export default function Home({ params }: any) {
-  console.log(params);
+const Contact = () => {
   return (
     <PageWrapper>
       <section className="flex min-h-screen flex-col items-center justify-between p-24 w-screen">
@@ -17,4 +16,6 @@ export default function Home({ params }: any) {
       </section>
     </PageWrapper>
   );
-}
+};
+
+export default Contact;

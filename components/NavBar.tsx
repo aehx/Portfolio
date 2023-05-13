@@ -11,6 +11,7 @@ const NavBar = ({ pathname }: { pathname: string }) => {
           width="40"
           height="40"
           className="mr-2"
+          priority={true}
         />
         <LinkButton
           href="/home"
@@ -27,11 +28,13 @@ const NavBar = ({ pathname }: { pathname: string }) => {
         )}
       </div>
       <div className="relative flex justify-start items-end">
-        <LinkButton
-          href="/home/projects"
-          text="Projects"
-          displayBottomBorder={true}
-        />
+        {pathname !== "/home/projects" && (
+          <LinkButton
+            href="/home/projects"
+            text="Projects"
+            displayBottomBorder={true}
+          />
+        )}
         <LinkButton
           href="/home/About"
           text="Contact"

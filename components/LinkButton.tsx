@@ -8,6 +8,7 @@ type LinkButtonProps = {
   text: string;
   className?: string;
   displayBottomBorder?: boolean;
+  blank?: string;
 };
 export const buttonBorderBottomMotion = {
   initial: { width: 0, height: "3px", backgroundColor: "#a1a1aa" },
@@ -23,11 +24,17 @@ const LinkButton = ({
   text,
   className,
   displayBottomBorder,
+  blank,
 }: LinkButtonProps) => {
   const path = usePathname();
   const style = `relative ${className} ` ?? "relative";
   return (
-    <Link href={href} className={style}>
+    <Link
+      rel="preload"
+      href={href}
+      className={style}
+      target={`${blank ? "_blank" : ""}`}
+    >
       <motion.div initial="hidden" whileHover="hover" animate="end">
         <motion.p
           initial={{ opacity: 0 }}

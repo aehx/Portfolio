@@ -2,10 +2,8 @@
 import * as THREE from "three";
 import { memo, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-const Planet = () => {
+const Planet = ({ isInactive }: { isInactive: any }) => {
   const canvasRef = useRef<null | HTMLDivElement>(null);
-  const gradientCanvasRef = useRef<null | any>(null);
-  const gradientTextureRef = useRef<null | any>(null);
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -15,6 +13,7 @@ const Planet = () => {
       0.1,
       1000
     );
+    let animationId: null | number = null;
     camera.position.z = 800;
     scene.background = new THREE.Color(255, 255, 255);
 
@@ -78,11 +77,9 @@ const Planet = () => {
         ? 30
         : 20;
     const deviceWidthY = window.innerWidth < 420 ? 180 : 0;
-    console.log(window.innerWidth);
     function animate() {
-      requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
       const time = performance.now() * 0.001;
-      console.log(deviceWidthX);
       // Mouvement de la planète
       const planetAngle = time * planetSpeed;
       const planetX = Math.cos(planetAngle) * planetDistance - deviceWidthX;
@@ -98,8 +95,9 @@ const Planet = () => {
       moon.rotation.y += moonRotationSpeed;
       renderer.render(scene, camera);
     }
-
-    animate();
+    if (!isInactive) {
+      animate();
+    }
     canvasRef.current?.addEventListener("wheel", (event: WheelEvent) => {
       if (event.deltaY > 0) {
         if (camera.position.z <= 950) camera.position.z += 5;
@@ -107,7 +105,12 @@ const Planet = () => {
         camera.position.z -= 5;
       }
     });
-  }, []);
+    return () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
+  }, [isInactive]);
   return (
     <motion.div
       initial={{ opacity: 0 }}

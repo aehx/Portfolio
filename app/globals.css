@@ -24,6 +24,7 @@
 .paragraphe {
   @apply text-zinc-200;
 }
+
 body {
   letter-spacing: 0.5px;
   color: rgb(var(--foreground-rgb));

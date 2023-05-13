@@ -1,20 +1,25 @@
 "use client";
 import React from "react";
 import PageWrapper from "../page-wrapper";
-import StyledButton from "@/components/StyledButton/StyledButton";
 import StyledCard from "@/components/StyledCard/StyledCard";
 import SeparationBar from "@/components/StyledBar/SeparationBar";
 import Paragraph from "@/components/TextComponent/Paragraphe";
+import ArrowUp from "@/components/ArrowUp";
 
 export default function Home() {
   return (
     <PageWrapper>
       <main className="flex h-screen flex-col items-end justify-between w-screen overflow-scroll">
-        <div className="flex flex-col item-center w-screen lg:w-1/2 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3">
+        <div
+          className="flex flex-col item-center w-screen lg:w-1/2 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative pb-20"
+          id="containerTop"
+          style={{ scrollBehavior: "smooth" }}
+        >
+          <span className="absolute top-0"></span>
           <StyledCard firstWord="ABOUT" secondWord="ME" thirdWord="👤" />
           <SeparationBar />
           <Paragraph
-            title="title"
+            title="Qu'est ce que je faisais ?"
             text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
   delectus, fugit voluptas explicabo suscipit, voluptatum nobis
   repellendus accusamus inventore porro dolorem praesentium
@@ -25,7 +30,7 @@ export default function Home() {
           />
           <SeparationBar />
           <Paragraph
-            title="title"
+            title="qu'est qui m'as amené à changer ?"
             text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
   delectus, fugit voluptas explicabo suscipit, voluptatum nobis
   repellendus accusamus inventore porro dolorem praesentium
@@ -36,7 +41,7 @@ export default function Home() {
           />
           <SeparationBar />
           <Paragraph
-            title="title"
+            title="le changement"
             text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
   delectus, fugit voluptas explicabo suscipit, voluptatum nobis
   repellendus accusamus inventore porro dolorem praesentium
@@ -45,12 +50,18 @@ export default function Home() {
   unde assumenda laborum recusandae. Tempora rem molestias possimus
   aperiam pariatur."
           />
-
-          <StyledButton
-            href="/home/projects"
-            text="RETURN TO HOME"
-            className="cursor-pointer pb-2 pt-6 pr-16 pl-3 text-[10px] font-semibold"
+          <SeparationBar />
+          <Paragraph
+            title="qu'est ce que je veux faire ?"
+            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+  delectus, fugit voluptas explicabo suscipit, voluptatum nobis
+  repellendus accusamus inventore porro dolorem praesentium
+  temporibus cum impedit error dolores, quibusdam illum nostrum odit
+  aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
+  unde assumenda laborum recusandae. Tempora rem molestias possimus
+  aperiam pariatur."
           />
+          <ArrowUp scrollTo="containerTop" />
         </div>
       </main>
     </PageWrapper>
