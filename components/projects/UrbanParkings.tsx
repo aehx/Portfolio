@@ -3,13 +3,13 @@ import SeparationBar from "../StyledBar/SeparationBar";
 import Paragraph from "../TextComponent/Paragraphe";
 import StyledCard from "../StyledCard/StyledCard";
 import ProjectVideoForPc from "./ProjectVideoForPc";
-import ProjectVideoForMobile from "./ProjectVideoForMobile";
+// import ProjectVideoForMobile from "./ProjectVideoForMobile";
 const UrbanParking = ({ device }: { device: string }) => {
   return (
     <>
-      {device !== "pc" && (
+      {/* {device !== "pc" && (
         <ProjectVideoForMobile src="/urban_parking_video.mp4" />
-      )}
+      )} */}
       {device === "pc" && <ProjectVideoForPc src="/urban_parking_video.mp4" />}
       <div
         className="flex flex-col item-center w-screen lg:w-1/2 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative pb-20"

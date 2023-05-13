@@ -40,7 +40,7 @@ const ProjectPictureForMobile = ({ src }: { src: string }) => {
         } z-50`}
       />
       <Image
-        src={src}
+        src={src ? src : ""}
         fill
         alt="Picture of the project"
         className={`object-cover ${isClicked ? "rounded-lg" : "rounded-lg"}`}

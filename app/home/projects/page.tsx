@@ -4,16 +4,17 @@ import PageWrapper from "../../page-wrapper";
 import checkDevice from "@/utils/checkDevice";
 import MoviesDistrict from "@/components/projects/MoviesDistrict";
 import UrbanParking from "@/components/projects/UrbanParkings";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import StyledCard from "@/components/StyledCard/StyledCard";
 import Paragraph from "@/components/TextComponent/Paragraphe";
 import LinkButton from "@/components/LinkButton";
 const Projects = () => {
   const device = checkDevice();
+  console.log("-----", device);
   return (
     <PageWrapper>
       <section className="flex h-screen flex-col items-end justify-between w-screen overflow-scroll">
-        <div className="flex flex-col justify-center items-center w-1/2 h-1/2 absolute bottom-[15%] left-0">
+        {/* <div className="flex flex-col justify-center items-center w-1/2 h-1/2 absolute bottom-[15%] left-0">
           <LinkButton
             href=""
             text="voir ce projet"
@@ -38,8 +39,8 @@ const Projects = () => {
             thirdWord="🚙 🛣️ 🚏"
             showScrollIndicator={false}
           />
-        </div>
-        {/* <MoviesDistrict device={device} /> */}
+        </div> */}
+        {device && <MoviesDistrict device={device} />}
         {/* <UrbanParking device={device} /> */}
       </section>
     </PageWrapper>

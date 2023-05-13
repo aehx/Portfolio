@@ -20,7 +20,7 @@ const StyledCard = ({
   const [width, setWidth] = useState(1);
 
   return (
-    <motion.section
+    <motion.div
       className="flex flex-col items-center justify-between relative"
       initial="initial"
       animate="end"
@@ -101,7 +101,7 @@ const StyledCard = ({
           {thirdWord}
         </motion.p>
       </div>
-    </motion.section>
+    </motion.div>
   );
 };
 

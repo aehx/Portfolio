@@ -6,18 +6,24 @@ import ProjectPictureForPc from "./projectFrameForPc";
 import ProjectPictureForMobile from "./projectPictureForMobile";
 
 const MoviesDistrict = ({ device }: { device: string }) => {
+  const picture =
+    device !== "pc" ? (
+      <ProjectPictureForMobile src="/movies_district.png" />
+    ) : null;
+  const video =
+    typeof window !== "undefined" && device === "pc" ? (
+      <ProjectPictureForPc src="/movies_district.png" />
+    ) : null;
   return (
     <>
-      {device !== "pc" && (
-        <ProjectPictureForMobile src="/movies_district.png" />
-      )}
-      {device === "pc" && <ProjectPictureForPc src="/movies_district.png" />}
+      {picture}
+      {video}
+
       <div
         className="flex flex-col item-center w-screen lg:w-1/2 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative pb-20"
         id="containerTop"
         style={{ scrollBehavior: "smooth" }}
       >
-        <span className="absolute top-0"></span>
         <StyledCard firstWord="Movies" secondWord="District" thirdWord="🍿🎬" />
         <SeparationBar />
         <Paragraph
