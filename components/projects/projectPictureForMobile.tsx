@@ -19,7 +19,7 @@ const ProjectPictureForMobile = ({ src }: { src: string }) => {
 
   return (
     <motion.div
-      className={`flex justify-center items-center fixed bottom-[2%] left-[2%] z-50`}
+      className={`flex justify-center items-center fixed bottom-[10%] left-[2%] z-50`}
       initial={{
         borderRadius: initialBorder,
         width: initialWidth,
@@ -48,7 +48,11 @@ const ProjectPictureForMobile = ({ src }: { src: string }) => {
         className={`object-cover ${isClicked ? "rounded-lg" : "rounded-lg"}`}
       />
       {isClicked && (
-        <StyledButton text="visit website" href="" className="py-5" />
+        <StyledButton
+          text="visit website"
+          href="https://movies-district.vercel.app/"
+          className="py-5"
+        />
       )}
     </motion.div>
   );

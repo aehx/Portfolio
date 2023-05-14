@@ -35,7 +35,7 @@ const ProjectVideoForMobile = ({ src }: { src: string }) => {
   }, []);
   return (
     <motion.div
-      className={`flex flex-col justify-center items-center fixed bottom-[2%] left-[2%] z-50`}
+      className={`flex flex-col justify-center items-center fixed bottom-[10%] left-[2%] z-50`}
       initial={{
         borderRadius: initialBorder,
         width: initialWidth,

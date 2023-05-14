@@ -12,7 +12,7 @@ const UrbanParking = ({ device }: { device: string }) => {
       )}
       {device === "pc" && <ProjectVideoForPc src="/urban_parking_video.mp4" />}
       <div
-        className="flex flex-col item-center w-screen lg:w-1/2 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative pb-20"
+        className="flex flex-col item-center w-screen lg:w-1/2 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative pb-20 mb-10"
         id="containerTop"
         style={{ scrollBehavior: "smooth" }}
       >
