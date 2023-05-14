@@ -51,9 +51,7 @@ const ProjectVideoForMobile = ({ src }: { src: string }) => {
       transition={{ duration: 1 }}
     >
       <div className="flex flex-col items-center">
-        {!isClicked && (
-          <p className="font-serif mr-2 text-zinc-300">See the demo</p>
-        )}
+        {!isClicked && <p className="font-serif mr-2 text-zinc-100">Demo</p>}
         <FontAwesomeIcon
           icon={!isClicked ? faEye : faTimes}
           size="2xl"

@@ -16,7 +16,6 @@ const UrbanParking = ({ device }: { device: string }) => {
         id="containerTop"
         style={{ scrollBehavior: "smooth" }}
       >
-        <span className="absolute top-0"></span>
         <StyledCard
           firstWord="Urban"
           secondWord="Parkings"

@@ -8,7 +8,7 @@ import ProjectPictureForMobile from "./projectPictureForMobile";
 const MoviesDistrict = ({ device }: { device: string }) => {
   const picture =
     device !== "pc" ? (
-      <ProjectPictureForMobile src="/movies_district.png" />
+      <ProjectPictureForMobile src="/Movies_D_logo.png" />
     ) : null;
   const video =
     typeof window !== "undefined" && device === "pc" ? (

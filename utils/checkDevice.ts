@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 const CheckDevice = () => {
-  console.log("check");
   if (typeof window !== "undefined") {
     const device = () => {
       switch (true) {
