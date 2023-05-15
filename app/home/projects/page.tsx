@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <PageWrapper>
       <section className="flex flex-col h-screen items-start pt-[30%] lg:pt-0 justify-evenly w-screen overflow-scroll">
-        <div className="flex flex-col justify-center items-center w-screen z-50 lg:w-1/2 lg:h-1/2 lg:absolute lg:bottom-[15%] lg:left-0 mb-10 lg:mb-0">
+        <div className="flex flex-col justify-center items-center w-screen z-50 lg:w-1/2 lg:h-1/2 lg:absolute lg:bottom-[15%] lg:left-0 lg:mb-0">
           <LinkButton
             href="/home/projects/movies_district"
             text="voir ce projet"

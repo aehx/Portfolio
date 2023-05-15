@@ -55,7 +55,7 @@ const Contact = () => {
             <input
               type="submit"
               value="send"
-              className="pl-0 mt-10 bg-zinc-300 hover:bg-zinc-100 transition-all duration-300 w-[140px] lg:w-[6vw] py-1 rounded-sm mx-auto"
+              className="mt-10 text-center bg-zinc-300 hover:bg-zinc-100 transition-all duration-300 w-[140px] lg:w-[6vw] py-1 rounded-sm mx-auto"
             />
           </form>
         </div>

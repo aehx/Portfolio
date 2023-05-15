@@ -16,7 +16,7 @@ const MoviesDistrict = ({ device }: { device: string }) => {
     ) : null;
   return (
     <div
-      className="flex flex-col item-center w-screen lg:w-1/2 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative lg:pb-20"
+      className="flex flex-col item-center w-screen lg:w-1/2 pb-20 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative lg:pb-20"
       id="containerTop"
       style={{ scrollBehavior: "smooth" }}
     >
@@ -45,7 +45,7 @@ aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
 unde assumenda laborum recusandae. Tempora rem molestias possimus
 aperiam pariatur."
       />
-      <ArrowUp scrollTo="containerTop" className="" />
+      <ArrowUp scrollTo="containerTop" />
     </div>
   );
 };

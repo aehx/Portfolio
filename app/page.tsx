@@ -11,9 +11,9 @@ export default function Welcome() {
   const [isInactive, setIsInactive] = useState(false);
   return (
     <PageWrapper>
-      <div className="flex flex-col items-center w-screen min-h-screen relative ">
+      <div className="flex flex-col items-center w-screen max-h-screen relative">
         <Planet isInactive={isInactive} />
-        <motion.div className="flex flex-col justify-center items-center w-[85vw] sm:w-[50vw] lg:max-w-[27vw] absolute top-[10%] lg:top-[25%] overflow-hidden [&>*]:mb-3 ">
+        <motion.div className="flex flex-col justify-center items-center w-[85vw] sm:w-[50vw] lg:max-w-[27vw] absolute top-[10%] lg:top-[25%] overflow-hidden [&>*]:mb-3 pt-[20%]">
           <AnimatedText
             text="Kevin's website"
             staggerChildren={0.9}

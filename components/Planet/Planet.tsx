@@ -6,6 +6,7 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
   const canvasRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
+    console.log("effect");
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       40,
@@ -78,6 +79,7 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
         : 20;
     const deviceWidthY = window.innerWidth < 420 ? 180 : 0;
     function animate() {
+      console.log("animate");
       animationId = requestAnimationFrame(animate);
       const time = performance.now() * 0.001;
       const planetAngle = time * planetSpeed;

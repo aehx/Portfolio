@@ -1,7 +1,6 @@
 "use client";
-import { faEye, faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const ProjectVideoForMobile = ({ src }: { src: string }) => {
@@ -52,7 +51,7 @@ const ProjectVideoForMobile = ({ src }: { src: string }) => {
             <FontAwesomeIcon
               icon={faPlay}
               size="2xl"
-              className={`text-zinc-300 cursor-pointer absolute top-[40%] z-50`}
+              className={`text-zinc-300 cursor-pointer absolute top-[40%] -z-10`}
               onClick={enterFullscreen}
             />
           </>
