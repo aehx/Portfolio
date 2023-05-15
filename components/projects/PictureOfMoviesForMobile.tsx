@@ -5,7 +5,7 @@ import StyledButton from "../StyledButton/StyledButton";
 import Image from "next/image";
 import { useState } from "react";
 
-const ProjectPictureForMobile = ({ src }: { src: string }) => {
+const PictureOfMoviesForMobile = ({ src }: { src: string }) => {
   const [isClicked, setIsClicked] = useState(false);
   const initialWidth = "18%";
   const initialHeight = "12%";
@@ -69,4 +69,4 @@ const ProjectPictureForMobile = ({ src }: { src: string }) => {
   );
 };
 
-export default ProjectPictureForMobile;
+export default PictureOfMoviesForMobile;

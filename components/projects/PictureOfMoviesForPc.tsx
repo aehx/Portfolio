@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import StyledButton from "../StyledButton/StyledButton";
 
-const ProjectPictureForPc = ({ src }: { src: string }) => {
+const PictureOfMoviesForPc = ({ src }: { src: string }) => {
   return (
     <>
       <motion.div
@@ -35,4 +35,4 @@ const ProjectPictureForPc = ({ src }: { src: string }) => {
     </>
   );
 };
-export default ProjectPictureForPc;
+export default PictureOfMoviesForPc;
