@@ -2,7 +2,7 @@ import ArrowUp from "../ArrowUp";
 import SeparationBar from "../StyledBar/SeparationBar";
 import Paragraph from "../TextComponent/Paragraphe";
 import StyledCard from "../StyledCard/StyledCard";
-// import ProjectPictureForPc from "./ProjectFrameForPc";
+import ProjectPictureForPc from "./ProjectFrameForPc";
 // import ProjectPictureForMobile from "./ProjectPictureForMobile";
 
 const MoviesDistrict = ({ device }: { device: string }) => {
@@ -20,6 +20,9 @@ const MoviesDistrict = ({ device }: { device: string }) => {
       id="containerTop"
       style={{ scrollBehavior: "smooth" }}
     >
+      {typeof window !== "undefined" && device === "pc" ? (
+        <ProjectPictureForPc src="/movies_district.png" />
+      ) : null}
       {/* {picture} */}
       {/* {video} */}
       <StyledCard firstWord="Movies" secondWord="District" thirdWord="🍿🎬" />
