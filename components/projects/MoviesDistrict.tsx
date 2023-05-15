@@ -31,7 +31,7 @@ const MoviesDistrict = ({ device }: { device: string }) => {
       <SeparationBar />
       <Paragraph
         title="development and technologies"
-        text="I developed this website using React, Next.js, and Tailwind CSS on the frontend, and Node.js with Express and MongoDB on the backend. This project allowed me to deepen my knowledge in these languages and become familiar with various concepts."
+        text="I developed this website using React, Next.js, and Tailwind CSS on the frontend. For the back-end, i used Node.js with Express and MongoDB. This project allowed me to deepen my knowledge in these languages and become familiar with various concepts."
       />
       <ArrowUp scrollTo="containerTop" />
     </div>
