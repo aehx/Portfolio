@@ -23,25 +23,13 @@ const UrbanParking = ({ device }: { device: string }) => {
         />
         <SeparationBar />
         <Paragraph
-          title="Le projet"
-          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-repellendus accusamus inventore porro dolorem praesentium
-temporibus cum impedit error dolores, quibusdam illum nostrum odit
-aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-unde assumenda laborum recusandae. Tempora rem molestias possimus
-aperiam pariatur."
+          title="The projet"
+          text="Urban Parking is a mobile application that will allow you to find available parking spaces around you. You can add your favorite parking spots to your favorites list and navigate to them using the suggested route!"
         />
         <SeparationBar />
         <Paragraph
-          title="Techno utilisées"
-          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-repellendus accusamus inventore porro dolorem praesentium
-temporibus cum impedit error dolores, quibusdam illum nostrum odit
-aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-unde assumenda laborum recusandae. Tempora rem molestias possimus
-aperiam pariatur."
+          title="development and technologies"
+          text="I developed this project using React Native for the frontend and Express with MongoDB for the backend. This experience allowed me to refine my skills in React Native, particularly in designing and utilizing navigation stacks based on token authentication."
         />
         <ArrowUp scrollTo="containerTop" />
       </div>

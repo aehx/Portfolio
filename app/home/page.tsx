@@ -19,43 +19,24 @@ export default function Home() {
             id="containerTop"
             style={{ scrollBehavior: "smooth" }}
           >
-            <span className="absolute top-0"></span>
             <StyledCard firstWord="ABOUT" secondWord="ME" thirdWord="👤" />
             <SeparationBar />
             <Paragraph
-              title="Qu'est ce que je faisais ?"
-              text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-  delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-  repellendus accusamus inventore porro dolorem praesentium
-  temporibus cum impedit error dolores, quibusdam illum nostrum odit
-  aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-  unde assumenda laborum recusandae. Tempora rem molestias possimus
-  aperiam pariatur."
+              title="Who i am ?"
+              text="As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp, where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. With an overflowing creativity, I am constantly seeking new ideas and projects.As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp, where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. With an overflowing creativity, I am constantly seeking new ideas and projects."
             />
             <SeparationBar />
             <Paragraph
-              title="qu'est qui m'as amené à changer ?"
-              text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-  delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-  repellendus accusamus inventore porro dolorem praesentium
-  temporibus cum impedit error dolores, quibusdam illum nostrum odit
-  aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-  unde assumenda laborum recusandae. Tempora rem molestias possimus
-  aperiam pariatur."
+              title="Skills"
+              text="I have gained some experience using the MERN stack during my training at La Capsule. On the front-end development side, I have learned React, React Native, Next.js, and Tailwind CSS. As for the back-end, my skills include Node.js, Express, and MongoDB. I am currently learning Fastify and Prisma to enhance my knowledge and skills."
             />
             <SeparationBar />
             <Paragraph
-              title="le changement"
-              text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-  delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-  repellendus accusamus inventore porro dolorem praesentium
-  temporibus cum impedit error dolores, quibusdam illum nostrum odit
-  aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-  unde assumenda laborum recusandae. Tempora rem molestias possimus
-  aperiam pariatur."
+              title="Next step"
+              text="With the aim of improving and deepening my knowledge, I wish to continue my studies in an alternating work-study program by joining the MSc Pro curriculum at Epitech Technology school. This program will allow me to leverage new technical skills for the benefit of a company during a 24-month alternating period, from September 2023 to July 2025."
             />
-            <SeparationBar />
-            <Paragraph
+            {/* <SeparationBar /> */}
+            {/* <Paragraph
               title="qu'est ce que je veux faire ?"
               text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
   delectus, fugit voluptas explicabo suscipit, voluptatum nobis
@@ -64,7 +45,7 @@ export default function Home() {
   aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
   unde assumenda laborum recusandae. Tempora rem molestias possimus
   aperiam pariatur."
-            />
+            /> */}
             <ArrowUp
               scrollTo="containerTop"
               className="bottom-[2%] right-[2%]"

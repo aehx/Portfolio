@@ -6,7 +6,6 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
   const canvasRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log("effect");
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       40,
@@ -18,17 +17,14 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     camera.position.z = 800;
     scene.background = new THREE.Color(0, 0, 0);
 
-    // Création du rendu
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     canvasRef.current?.appendChild(renderer.domElement);
 
-    // Création de la lumière
     const light = new THREE.DirectionalLight(0xffffff, 1);
     light.position.set(100, 100, -100);
     scene.add(light);
 
-    // Création de la texture de la planète
     const roughnessTexture = new THREE.TextureLoader().load("/pic_t.jpg");
     const planetTexture = new THREE.TextureLoader().load("/pic.jpg", () => {
       renderer.render(scene, camera);
@@ -37,11 +33,9 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
       renderer.render(scene, camera);
     });
 
-    // Création de la géométrie de la sphère
     const planetGeometry = new THREE.SphereGeometry(50, 32, 32);
     const moonGeometry = new THREE.SphereGeometry(25, 16, 16);
 
-    // Création du matériau de la sphère
     const planetMaterial = new THREE.MeshStandardMaterial({
       map: planetTexture,
       bumpMap: planetTexture,
@@ -55,7 +49,6 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
       roughnessMap: roughnessTexture,
     });
 
-    // Ajout de la sphère à la scène
     const planet = new THREE.Mesh(planetGeometry, planetMaterial);
     const moon = new THREE.Mesh(moonGeometry, moonMaterial);
 
@@ -79,17 +72,15 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
         : 20;
     const deviceWidthY = window.innerWidth < 420 ? 180 : 0;
     function animate() {
-      console.log("animate");
       animationId = requestAnimationFrame(animate);
       const time = performance.now() * 0.001;
       const planetAngle = time * planetSpeed;
-      // Mouvement de la planète
+
       const planetX = Math.cos(planetAngle) * planetDistance - deviceWidthX;
       const planetY = Math.sin(planetAngle) * planetDistance - deviceWidthY;
       planet.position.set(planetX, planetY, 0);
       planet.rotation.y += planetRotationSpeed;
 
-      // Mouvement de la Lune
       const moonAngle = time * moonSpeed;
       const moonX = Math.cos(moonAngle) * moonDistance + planetX;
       const moonY = Math.sin(moonAngle) * moonDistance + planetY;

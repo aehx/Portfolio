@@ -2,8 +2,8 @@ import ArrowUp from "../ArrowUp";
 import SeparationBar from "../StyledBar/SeparationBar";
 import Paragraph from "../TextComponent/Paragraphe";
 import StyledCard from "../StyledCard/StyledCard";
-import ProjectPictureForPc from "./projectFrameForPc";
 import ProjectPictureForMobile from "./projectPictureForMobile";
+import ProjectPictureForPc from "./projectFrameForPc";
 
 const MoviesDistrict = ({ device }: { device: string }) => {
   const picture =
@@ -25,25 +25,13 @@ const MoviesDistrict = ({ device }: { device: string }) => {
       <StyledCard firstWord="Movies" secondWord="District" thirdWord="🍿🎬" />
       <SeparationBar />
       <Paragraph
-        title="Le projet"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-repellendus accusamus inventore porro dolorem praesentium
-temporibus cum impedit error dolores, quibusdam illum nostrum odit
-aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-unde assumenda laborum recusandae. Tempora rem molestias possimus
-aperiam pariatur."
+        title="The projet"
+        text="Movies District is a movie website that I thoroughly enjoyed developing. If you're in need of inspiration, this site might help you find your weekend movie !"
       />
       <SeparationBar />
       <Paragraph
-        title="Techno utilisées"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-repellendus accusamus inventore porro dolorem praesentium
-temporibus cum impedit error dolores, quibusdam illum nostrum odit
-aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-unde assumenda laborum recusandae. Tempora rem molestias possimus
-aperiam pariatur."
+        title="development and technologies"
+        text="I developed this website using React, Next.js, and Tailwind CSS on the frontend, and Node.js with Express and MongoDB on the backend. This project allowed me to deepen my knowledge in these languages and become familiar with various concepts."
       />
       <ArrowUp scrollTo="containerTop" />
     </div>

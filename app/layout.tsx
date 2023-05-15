@@ -17,7 +17,7 @@ export const metadata = {
     template: "%s | Kevin's website",
   },
   description:
-    "Welcome, this is my website, here you can see my website/app projects",
+    "Welcome, this is my portfolio, here you can see my website/app projects",
 };
 
 export default function RootLayout({

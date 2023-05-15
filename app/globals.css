@@ -7,17 +7,8 @@
   padding: 0;
   box-sizing: border-box;
   --foreground-rgb: 0, 0, 0;
-  /* --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 255, 255, 255; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: "#ddd";
-    --background-end-rgb: 0, 0, 0; */
-  }
-}
 ::-webkit-scrollbar {
   @apply hidden;
 }
@@ -28,12 +19,6 @@
 body {
   letter-spacing: 0.5px;
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    ) */
-  /* rgb(var(--background-start-rgb)); */
 }
 
 h2 {

@@ -72,7 +72,9 @@ const StyledCard = ({
             setWidth(0);
           }}
           transition={{ duration: 1, delay: 0.5 }}
-          className={`absolute bottom-0 ${width !== 0 ? "bg-zinc-200" : ""}`}
+          className={`absolute bottom-[5%] lg:bottom-0 ${
+            width !== 0 ? "bg-zinc-200" : ""
+          }`}
         />
         <motion.div
           className="absolute bottom-0"

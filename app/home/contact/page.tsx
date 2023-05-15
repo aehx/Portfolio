@@ -2,7 +2,6 @@
 import emailjs from "emailjs-com";
 import PageWrapper from "../../page-wrapper";
 import { useRef, useState } from "react";
-
 const Contact = () => {
   const form = useRef<null | HTMLFormElement>(null);
   const [mailSentMsg, setMailSentMsg] = useState("");
@@ -11,10 +10,10 @@ const Contact = () => {
     if (form.current) {
       emailjs
         .sendForm(
-          "service_qvafjlp",
-          "template_47a0h4m",
+          process.env.NEXT_PUBLIC_SERVICEID as string,
+          process.env.NEXT_PUBLIC_TEMPLATEID as string,
           form.current,
-          "h2njFbS1ofnoRF80a"
+          process.env.NEXT_PUBLIC_API_KEY
         )
         .then((result) => {
           setMailSentMsg("Votre message à bien été envoyé");
