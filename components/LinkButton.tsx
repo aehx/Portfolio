@@ -39,7 +39,7 @@ const LinkButton = ({
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 2 } }}
-          className={`${path === "/" ? "text-zinc-800" : "text-white"} text-sm`}
+          className={`text-zinc-200 text-sm`}
         >
           {text}
         </motion.p>

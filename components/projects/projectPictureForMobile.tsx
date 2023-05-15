@@ -61,6 +61,7 @@ const ProjectPictureForMobile = ({ src }: { src: string }) => {
             text="visit website"
             href="https://movies-district.vercel.app/"
             className="py-5"
+            blank="_blank"
           />
         )}
       </div>

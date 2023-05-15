@@ -58,7 +58,7 @@ const AnimatedText = ({
         >
           {words.map((word, key) => (
             <motion.span
-              className={`mr-1 ${className}`}
+              className={`mr-1 ${className} text-zinc-200`}
               key={key}
               variants={wordVariant}
             >

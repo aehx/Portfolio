@@ -15,7 +15,7 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     );
     let animationId: null | number = null;
     camera.position.z = 800;
-    scene.background = new THREE.Color(255, 255, 255);
+    scene.background = new THREE.Color(0, 0, 0);
 
     // Création du rendu
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -23,11 +23,13 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     canvasRef.current?.appendChild(renderer.domElement);
 
     // Création de la lumière
-    const light = new THREE.AmbientLight(0xffffff, 0.5);
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(100, 100, -100);
     scene.add(light);
 
     // Création de la texture de la planète
-    const planetTexture = new THREE.TextureLoader().load("/earth.jpg", () => {
+    const roughnessTexture = new THREE.TextureLoader().load("/pic_t.jpg");
+    const planetTexture = new THREE.TextureLoader().load("/pic.jpg", () => {
       renderer.render(scene, camera);
     });
     const moonTexture = new THREE.TextureLoader().load("/moon.jpg", () => {
@@ -39,19 +41,17 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     const moonGeometry = new THREE.SphereGeometry(25, 16, 16);
 
     // Création du matériau de la sphère
-    const planetMaterial = new THREE.MeshPhongMaterial({
+    const planetMaterial = new THREE.MeshStandardMaterial({
       map: planetTexture,
       bumpMap: planetTexture,
-      bumpScale: 0.1,
-      specularMap: planetTexture,
-      specular: new THREE.Color("grey"),
+      bumpScale: 2,
+      roughnessMap: roughnessTexture,
     });
-    const moonMaterial = new THREE.MeshPhongMaterial({
+    const moonMaterial = new THREE.MeshStandardMaterial({
       map: moonTexture,
       bumpMap: moonTexture,
       bumpScale: 0.1,
-      specularMap: moonTexture,
-      specular: new THREE.Color("grey"),
+      roughnessMap: roughnessTexture,
     });
 
     // Ajout de la sphère à la scène
@@ -80,8 +80,8 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     function animate() {
       animationId = requestAnimationFrame(animate);
       const time = performance.now() * 0.001;
-      // Mouvement de la planète
       const planetAngle = time * planetSpeed;
+      // Mouvement de la planète
       const planetX = Math.cos(planetAngle) * planetDistance - deviceWidthX;
       const planetY = Math.sin(planetAngle) * planetDistance - deviceWidthY;
       planet.position.set(planetX, planetY, 0);
