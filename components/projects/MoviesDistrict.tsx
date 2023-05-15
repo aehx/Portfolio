@@ -2,8 +2,8 @@ import ArrowUp from "../ArrowUp";
 import SeparationBar from "../StyledBar/SeparationBar";
 import Paragraph from "../TextComponent/Paragraphe";
 import StyledCard from "../StyledCard/StyledCard";
-import ProjectPictureForMobile from "./ProjectPictureForMobile";
 import ProjectPictureForPc from "./ProjectFrameForPc";
+import ProjectPictureForMobile from "./ProjectPictureForMobile";
 
 const MoviesDistrict = ({ device }: { device: string }) => {
   const picture =
