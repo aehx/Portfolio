@@ -1,5 +1,5 @@
 "use client";
-import { faEye, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -14,6 +14,12 @@ const ProjectVideoForMobile = ({ src }: { src: string }) => {
   const targetHeight = isClicked ? "92%" : "12%";
   const handleClick = () => {
     setIsClicked(!isClicked);
+    if (videoRef.current && !isClicked) {
+      videoRef.current.play();
+    }
+    if (videoRef.current && isClicked) {
+      videoRef.current.pause();
+    }
   };
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
@@ -33,9 +39,18 @@ const ProjectVideoForMobile = ({ src }: { src: string }) => {
       }
     };
   }, []);
+  const enterFullscreen = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      }
+    }
+  };
+
   return (
     <motion.div
-      className={`flex flex-col justify-center items-center fixed bottom-[10%] left-[2%] z-50`}
+      className={`flex flex-col justify-center items-center fixed bottom-[5%] left-[2%] z-50`}
       initial={{
         borderRadius: initialBorder,
         width: initialWidth,
@@ -51,15 +66,17 @@ const ProjectVideoForMobile = ({ src }: { src: string }) => {
       transition={{ duration: 1 }}
     >
       <div className="flex flex-col items-center">
-        {!isClicked && <p className="font-serif mr-2 text-zinc-100">Demo</p>}
-        <FontAwesomeIcon
-          icon={!isClicked ? faEye : faTimes}
-          size="2xl"
-          onClick={handleClick}
-          className={`text-zinc-300 cursor-pointer ${
-            isClicked ? "absolute top-[3%] right-[10%]" : "absolute top-[45%]"
-          } z-50`}
-        />
+        {!isClicked && (
+          <>
+            <p className="font-serif mr-2 text-zinc-100">Project</p>
+            <FontAwesomeIcon
+              icon={faPlay}
+              size="2xl"
+              onClick={enterFullscreen}
+              className={`text-zinc-300 cursor-pointer absolute top-[40%] z-50`}
+            />
+          </>
+        )}
       </div>
       <motion.video
         ref={videoRef}
@@ -67,6 +84,7 @@ const ProjectVideoForMobile = ({ src }: { src: string }) => {
         controls
         className="h-full w-full rounded-lg"
         id="video"
+        preload="auto"
       />
     </motion.div>
   );

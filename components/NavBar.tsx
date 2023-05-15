@@ -36,7 +36,7 @@ const NavBar = ({ pathname }: { pathname: string }) => {
           />
         )}
         <LinkButton
-          href="/home/About"
+          href="/home/contact"
           text="Contact"
           className="ml-5"
           displayBottomBorder={true}

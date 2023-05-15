@@ -1,7 +1,6 @@
 "use client";
 import UrbanParking from "@/components/projects/UrbanParkings";
 import checkDevice from "@/utils/checkDevice";
-
 const UrbanParkingPage = () => {
   const device = checkDevice();
   return (

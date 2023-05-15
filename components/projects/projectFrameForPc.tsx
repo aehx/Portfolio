@@ -21,6 +21,7 @@ const ProjectPictureForPc = ({ src }: { src: string }) => {
           fill
           alt="Picture of the project"
           className="object-cover"
+          priority={true}
         />
         <div className="absolute -bottom-20">
           <StyledButton
