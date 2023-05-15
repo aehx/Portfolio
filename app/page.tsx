@@ -22,7 +22,7 @@ export default function Welcome() {
           />
           <div className="[&>*]:mb-5">
             <AnimatedText
-              text="Bienvenue sur mon portfolio, vous y trouverez mes réalisations et projets. Passionné par la création et l'innovation, j'ai à cœur de développer des solutions digitales de qualité répondant aux besoins de mes clients."
+              text="This is a test xx xx xx xxx xxx xxx xxx xxx xxx xxx xxx xxx"
               staggerChildren={0.1}
               delay={2.8}
               showButtonAfter={true}

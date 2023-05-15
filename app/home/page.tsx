@@ -35,17 +35,6 @@ export default function Home() {
               title="Next step"
               text="With the aim of improving and deepening my knowledge, I wish to continue my studies in an alternating work-study program by joining the MSc Pro curriculum at Epitech Technology school. This program will allow me to leverage new technical skills for the benefit of a company during a 24-month alternating period, from September 2023 to July 2025."
             />
-            {/* <SeparationBar /> */}
-            {/* <Paragraph
-              title="qu'est ce que je veux faire ?"
-              text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
-  delectus, fugit voluptas explicabo suscipit, voluptatum nobis
-  repellendus accusamus inventore porro dolorem praesentium
-  temporibus cum impedit error dolores, quibusdam illum nostrum odit
-  aut. Ducimus cupiditate nostrum molestiae iusto natus quas fugiat,
-  unde assumenda laborum recusandae. Tempora rem molestias possimus
-  aperiam pariatur."
-            /> */}
             <ArrowUp
               scrollTo="containerTop"
               className="bottom-[2%] right-[2%]"
