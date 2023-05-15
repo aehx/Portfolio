@@ -22,8 +22,8 @@ export default function Home() {
             <StyledCard firstWord="ABOUT" secondWord="ME" thirdWord="👤" />
             <SeparationBar />
             <Paragraph
-              title="Who i am ?"
-              text="As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp, where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. With an overflowing creativity, I am constantly seeking new ideas and projects.As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp, where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. With an overflowing creativity, I am constantly seeking new ideas and projects."
+              title="Who am i ?"
+              text="As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. With an overflowing creativity, I am constantly seeking new ideas and projects.As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp, where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. With an overflowing creativity, I am constantly seeking new ideas and projects."
             />
             <SeparationBar />
             <Paragraph
@@ -33,7 +33,7 @@ export default function Home() {
             <SeparationBar />
             <Paragraph
               title="Next step"
-              text="With the aim of improving and deepening my knowledge, I wish to continue my studies in an alternating work-study program by joining the MSc Pro curriculum at Epitech Technology school. This program will allow me to leverage new technical skills for the benefit of a company during a 24-month alternating period, from September 2023 to July 2025."
+              text="With the aim of improving and deepening my knowledge, I wish to continue my studies in an alternating work-study program by joining the MSc Pro curriculum at Epitech Technology school. This program will allow me to leverage new technical skills for the benefit of a company during 24 months alternating training, from September 2023 to July 2025."
             />
             <ArrowUp
               scrollTo="containerTop"

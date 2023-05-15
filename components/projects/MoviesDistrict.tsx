@@ -26,7 +26,7 @@ const MoviesDistrict = ({ device }: { device: string }) => {
       <SeparationBar />
       <Paragraph
         title="The projet"
-        text="Movies District is a movie website that I thoroughly enjoyed developing. If you're in need of inspiration, this site might help you find your weekend movie !"
+        text="Movies District is a movie website that I thoroughly enjoyed developing. You don't know what to watch tonight, this website will help you to find your movie !"
       />
       <SeparationBar />
       <Paragraph

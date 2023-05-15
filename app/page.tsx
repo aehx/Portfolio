@@ -22,14 +22,14 @@ export default function Welcome() {
           />
           <div className="[&>*]:mb-5">
             <AnimatedText
-              text="Welcome to my website. Here, you can explore my portfolio, discover my skills, and learn more about me. If you find my projects interesting or would like to get in touch, please visit the dedicated contact section."
+              text="Welcome to my website. Here you can explore my portfolio, discover my skills, and learn more about me. If you find my projects interesting or would like to get in touch, please visit the dedicated contact section."
               staggerChildren={0.1}
               delay={2.8}
               showButtonAfter={true}
               className="text-sm font-serif"
             />
             <AnimatedText
-              text="Thank you for visiting, and enjoy your browsing experience."
+              text="Thank you for visiting and enjoy your browsing experience."
               staggerChildren={0.1}
               delay={6.5}
               showButtonAfter={true}
