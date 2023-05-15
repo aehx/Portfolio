@@ -18,6 +18,7 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     scene.background = new THREE.Color(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     canvasRef.current?.appendChild(renderer.domElement);
 
