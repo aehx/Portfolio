@@ -3,6 +3,7 @@ import * as THREE from "three";
 import { memo, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 const Planet = ({ isInactive }: { isInactive: any }) => {
+  const x = "";
   const canvasRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
