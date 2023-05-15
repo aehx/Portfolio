@@ -2,26 +2,26 @@ import ArrowUp from "../ArrowUp";
 import SeparationBar from "../StyledBar/SeparationBar";
 import Paragraph from "../TextComponent/Paragraphe";
 import StyledCard from "../StyledCard/StyledCard";
-import ProjectPictureForPc from "./ProjectFrameForPc";
-import ProjectPictureForMobile from "./ProjectPictureForMobile";
+// import ProjectPictureForPc from "./ProjectFrameForPc";
+// import ProjectPictureForMobile from "./ProjectPictureForMobile";
 
 const MoviesDistrict = ({ device }: { device: string }) => {
-  const picture =
-    device !== "pc" ? (
-      <ProjectPictureForMobile src="/Movies_D_logo.png" />
-    ) : null;
-  const video =
-    typeof window !== "undefined" && device === "pc" ? (
-      <ProjectPictureForPc src="/movies_district.png" />
-    ) : null;
+  // const picture =
+  //   device !== "pc" ? (
+  //     <ProjectPictureForMobile src="/Movies_D_logo.png" />
+  //   ) : null;
+  // const video =
+  //   typeof window !== "undefined" && device === "pc" ? (
+  //     <ProjectPictureForPc src="/movies_district.png" />
+  //   ) : null;
   return (
     <div
       className="flex flex-col item-center w-screen lg:w-1/2 pb-20 pt-[20%] lg:pt-[20%] z-10 [&>*]:mb-3 relative lg:pb-20"
       id="containerTop"
       style={{ scrollBehavior: "smooth" }}
     >
-      {picture}
-      {video}
+      {/* {picture} */}
+      {/* {video} */}
       <StyledCard firstWord="Movies" secondWord="District" thirdWord="🍿🎬" />
       <SeparationBar />
       <Paragraph
