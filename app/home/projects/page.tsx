@@ -2,7 +2,7 @@
 
 import PageWrapper from "../../page-wrapper";
 import LinkButton from "@/components/LinkButton";
-import ProjectPicture from "@/components/picture/ProjectPicture";
+import ProjectPicture from "@/components/ProjectPicture/ProjectPicture";
 const Projects = () => {
   return (
     <PageWrapper>

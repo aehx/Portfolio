@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import PageWrapper from "../page-wrapper";
 import NavBar from "@/components/NavBar";
 import { usePathname } from "next/navigation";
@@ -9,6 +9,9 @@ export default function HomeLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    console.log(window);
+  }, []);
   const pathname = usePathname();
   return (
     <>

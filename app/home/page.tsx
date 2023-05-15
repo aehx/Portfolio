@@ -65,7 +65,10 @@ export default function Home() {
   unde assumenda laborum recusandae. Tempora rem molestias possimus
   aperiam pariatur."
             />
-            <ArrowUp scrollTo="containerTop" />
+            <ArrowUp
+              scrollTo="containerTop"
+              className="bottom-[2%] right-[2%]"
+            />
           </div>
         </main>
       </PageWrapper>

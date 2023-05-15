@@ -27,6 +27,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
       <body className={`${orbitron.className}`}>{children}</body>
     </html>
   );
