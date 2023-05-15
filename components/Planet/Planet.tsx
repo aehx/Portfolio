@@ -25,13 +25,12 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     light.position.set(100, 100, -100);
     scene.add(light);
 
-    const roughnessTexture = new THREE.TextureLoader().load("/pic_t.jpg");
     const planetTexture = new THREE.TextureLoader().load("/pic.jpg", () => {
       renderer.render(scene, camera);
     });
-    const moonTexture = new THREE.TextureLoader().load("/moon.jpg", () => {
-      renderer.render(scene, camera);
-    });
+    const roughtTexture = new THREE.TextureLoader().load("/rought.jpg");
+    const moonTexture = new THREE.TextureLoader().load("/winter.jpg");
+    const moonSTexture = new THREE.TextureLoader().load("/winter_texture.png");
 
     const planetGeometry = new THREE.SphereGeometry(50, 32, 32);
     const moonGeometry = new THREE.SphereGeometry(25, 16, 16);
@@ -40,13 +39,13 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
       map: planetTexture,
       bumpMap: planetTexture,
       bumpScale: 2,
-      roughnessMap: roughnessTexture,
+      roughnessMap: roughtTexture,
     });
     const moonMaterial = new THREE.MeshStandardMaterial({
       map: moonTexture,
-      bumpMap: moonTexture,
+      bumpMap: moonSTexture,
       bumpScale: 0.1,
-      roughnessMap: roughnessTexture,
+      roughnessMap: roughtTexture,
     });
 
     const planet = new THREE.Mesh(planetGeometry, planetMaterial);
@@ -60,7 +59,7 @@ const Planet = ({ isInactive }: { isInactive: any }) => {
     const planetSpeed = 0.09;
     const planetRotationSpeed = 0.002;
     const moonSpeed = 0.09;
-    const moonRotationSpeed = 0.001;
+    const moonRotationSpeed = 0.008;
 
     const deviceWidthX =
       window.innerWidth > 1400
