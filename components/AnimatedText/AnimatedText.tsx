@@ -17,7 +17,7 @@ const AnimatedText = ({
   staggerChildren: number;
   delay: number;
   showButtonAfter?: boolean;
-  end?: (x: boolean) => void;
+  end?: (lastAnimation: boolean) => void;
 }): JSX.Element => {
   const [word, setWord] = useState<React.ReactNode | null>(null);
   const words = text.split(" ");
