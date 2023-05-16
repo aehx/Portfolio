@@ -21,7 +21,7 @@ const NavBar = ({ pathname }: { pathname: string }) => {
         {pathname !== "/home" && (
           <LinkButton
             href="/home"
-            text="About me"
+            text="About"
             className="ml-5"
             displayBottomBorder={true}
           />
