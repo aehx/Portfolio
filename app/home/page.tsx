@@ -23,7 +23,7 @@ export default function Home() {
             <SeparationBar />
             <Paragraph
               title="Who am i ?"
-              text="As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. I am constantly seeking new ideas and projects.As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp, where I gained the necessary skills to design mobile applications and websites. I am constantly seeking new ideas and projects."
+              text="As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp where I gained the necessary skills to design mobile applications and websites. Passionate about the creation process, I have been fascinated by how a simple idea or concept can come to life and transform into something tangible and captivating. I am constantly seeking new ideas and projects.As a full-stack developer, I have completed an intensive training program at Capsule's bootcamp, where I gained the necessary skills to design mobile applications and websites."
             />
             <SeparationBar />
             <Paragraph
